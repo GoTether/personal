@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kelly's Birthday Trip — Boise & Idaho City</title>
+  <style>
+    :root {
+      --bg: #0f172a;          /* slate-900 */
+      --card: #111827;        /* gray-900 */
+      --card-2: #0b1220;
+      --text: #e5e7eb;        /* gray-200 */
+      --muted: #9ca3af;       /* gray-400 */
+      --accent: #60a5fa;      /* blue-400 */
+      --accent-2: #22d3ee;    /* cyan-400 */
+      --border: #1f2937;      /* gray-800 */
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1000px 600px at 10% -10%, rgba(96,165,250,.15), transparent 60%),
+                  radial-gradient(800px 500px at 90% -10%, rgba(34,211,238,.15), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 48px auto;
+      padding: 0 20px 40px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 2.2vw + 1rem, 2.6rem);
+      margin: 0 0 8px;
+      letter-spacing: 0.3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .subtitle { color: var(--muted); font-size: 0.95rem; }
+
+    /* Accordion */
+    .accordion { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: rgba(17,24,39,.6); backdrop-filter: blur(6px); }
+    .item + .item { border-top: 1px solid var(--border); }
+    .trigger {
+      appearance: none; border: 0; width: 100%; text-align: left; cursor: pointer; display: grid; grid-template-columns: 1fr auto; align-items: center;
+      padding: 18px 20px; background: transparent; color: var(--text); font-size: 1.05rem; font-weight: 650; letter-spacing: .2px;
+    }
+    .trigger:hover { background: rgba(96,165,250,.06); }
+    .chev { transition: transform .25s ease; opacity: .9; }
+    .item[aria-expanded="true"] .chev { transform: rotate(180deg); }
+    .panel { display: none; padding: 16px 22px 22px; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)); }
+    .item[aria-expanded="true"] .panel { display: block; }
+
+    /* Lists */
+    .list { margin: 0; padding-left: 1rem; }
+    .list li { margin: 6px 0; }
+    a { color: #93c5fd; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Address badge */
+    .addr { display: block; color: var(--muted); font-size: .92rem; }
+
+    /* Footer */
+    footer { color: var(--muted); font-size: .9rem; margin-top: 18px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Kelly's Birthday Trip — Boise &amp; Idaho City</h1>
+      <div class="subtitle">September 6–10 • Timeline &amp; Addresses (Accordion)</div>
+    </header>
+
+    <section class="accordion" id="trip-accordion" role="tablist" aria-label="Trip itinerary">
+
+      <!-- Saturday -->
+      <article class="item" id="day-sat" role="tabpanel" aria-expanded="false">
+        <button class="trigger" role="tab" aria-controls="panel-sat" aria-expanded="false">
+          <span>Saturday, Sept 6</span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel" id="panel-sat">
+          <ul class="list">
+            <li><strong>Funky Taco</strong> <span class="addr">801 W Bannock St, Boise, ID 83702</span></li>
+            <li><strong>Art in the Park</strong> (Julia Davis Park) <span class="addr">700 S Capitol Blvd, Boise, ID 83702</span></li>
+            <li>Walked back to hotel to rest</li>
+            <li><strong>Freak Alley Gallery</strong> <span class="addr">210 N 9th St, Boise, ID 83702</span></li>
+            <li><strong>Idaho State Capitol Building</strong> (evening walk) <span class="addr">700 W Jefferson St, Boise, ID 83702</span></li>
+            <li>Hotel — live music: <strong>Harry Dial</strong></li>
+            <li><em>Hotel Movie:</em> <strong>Hot Shots!</strong></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Sunday -->
+      <article class="item" id="day-sun" role="tabpanel" aria-expanded="false">
+        <button class="trigger" role="tab" aria-controls="panel-sun" aria-expanded="false">
+          <span>Sunday, Sept 7</span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel" id="panel-sun">
+          <ul class="list">
+            <li><strong>Enterprise Rent‑A‑Car</strong> (pickup) <span class="addr">2618 W Fairview Ave, Boise, ID 83702</span></li>
+            <li><strong>Ste. Chapelle Winery</strong> (tasting + snack) <span class="addr">19348 Lowell Rd, Caldwell, ID 83607</span></li>
+            <li><strong>Koenig Distillery</strong> (tasting) <span class="addr">20928 Grape Ln, Caldwell, ID 83607</span></li>
+            <li><strong>Peaceful Belly Farm Café</strong> (lunch) <span class="addr">21452 Hoskins Rd, Caldwell, ID 83607</span></li>
+            <li>Returned to Boise — downtown walk</li>
+            <li><em>Hotel Movie:</em> <strong>Hot Shots! Part Deux</strong></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Monday -->
+      <article class="item" id="day-mon" role="tabpanel" aria-expanded="false">
+        <button class="trigger" role="tab" aria-controls="panel-mon" aria-expanded="false">
+          <span>Monday, Sept 8</span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel" id="panel-mon">
+          <ul class="list">
+            <li>Drove to <strong>Idaho City</strong> (historic core)</li>
+            <li><strong>Boise Basin Museum</strong> <span class="addr">206 W Main St, Idaho City, ID 83631</span></li>
+            <li><strong>Pioneer Cemetery (Boot Hill)</strong> <span class="addr">503 Montgomery St, Idaho City, ID 83631</span></li>
+            <li><strong>Trudy’s Kitchen</strong> (lunch) <span class="addr">3876 ID‑21, Idaho City, ID 83631</span></li>
+            <li><strong>Old Idaho Penitentiary</strong> <span class="addr">2445 Old Penitentiary Rd, Boise, ID 83712</span></li>
+            <li><strong>Telaya Wine Co.</strong> <span class="addr">240 E 32nd St, Garden City, ID 83714</span></li>
+            <li><strong>Boise Whitewater Park (River Wave)</strong> <span class="addr">3400 W Pleasanton Ave, Boise, ID 83702</span></li>
+            <li><strong>Westside Drive‑In</strong> (baked potato sundae) <span class="addr">1939 W State St, Boise, ID 83702</span></li>
+            <li><strong>Wise Guys Pizza Pie</strong> (slice ~8pm) <span class="addr">10438 W Overland Rd, Boise, ID 83709</span></li>
+            <li>Returned rental car • Lime scooters back to hotel</li>
+            <li><em>Hotel Movie:</em> <strong>Napoleon Dynamite</strong></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Tuesday -->
+      <article class="item" id="day-tue" role="tabpanel" aria-expanded="false">
+        <button class="trigger" role="tab" aria-controls="panel-tue" aria-expanded="false">
+          <span>Tuesday, Sept 9</span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel" id="panel-tue">
+          <ul class="list">
+            <li><strong>Basque Museum &amp; Cultural Center</strong> <span class="addr">611 W Grove St, Boise, ID 83702</span></li>
+            <li><strong>Leku Ona Restaurant</strong> (lunch, Basque cocktails) <span class="addr">117 S 6th St, Boise, ID 83702</span></li>
+            <li><strong>Idaho State Capitol Building</strong> (tour, film, gift shop, exhibits) <span class="addr">700 W Jefferson St, Boise, ID 83702</span></li>
+            <li>Hotel break</li>
+            <li><strong>Sturman’s Wine &amp; Cigars</strong> (trivia night; $25 GC win) <span class="addr">4204 W Chinden Blvd, Garden City, ID 83714</span></li>
+            <li><em>Hotel Movie:</em> <strong>Eurovision Song Contest: The Story of Fire Saga</strong></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Wednesday -->
+      <article class="item" id="day-wed" role="tabpanel" aria-expanded="false">
+        <button class="trigger" role="tab" aria-controls="panel-wed" aria-expanded="false">
+          <span>Wednesday, Sept 10</span>
+          <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="panel" id="panel-wed">
+          <ul class="list">
+            <li>Hotel breakfast &amp; packing</li>
+            <li><strong>Boise Airport (BOI)</strong> <span class="addr">3201 W Airport Way, Boise, ID 83705</span></li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+
+    <footer>
+      Tip: Click a day to expand; only one day stays open at a time.
+    </footer>
+  </div>
+
+  <script>
+    // Accessible single-open accordion
+    const accordion = document.getElementById('trip-accordion');
+    const items = [...accordion.querySelectorAll('.item')];
+
+    function closeAll(except = null) {
+      items.forEach(it => {
+        const isExcept = it === except;
+        it.setAttribute('aria-expanded', isExcept ? 'true' : 'false');
+        const btn = it.querySelector('.trigger');
+        btn.setAttribute('aria-expanded', isExcept ? 'true' : 'false');
+      });
+    }
+
+    accordion.addEventListener('click', (e) => {
+      const btn = e.target.closest('.trigger');
+      if (!btn) return;
+      const item = btn.closest('.item');
+      const isOpen = item.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        // collapse if already open
+        item.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        closeAll(item);
+      }
+    });
+
+    // Optionally open the first day by default
+    // closeAll(items[0]);
+  </script>
+</body>
+</html>
