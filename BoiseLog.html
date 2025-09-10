@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kelly's Birthday Trip — Boise & Idaho City</title>
-  <meta name="description" content="Accordion itinerary for Kelly's Birthday Trip to Boise & Idaho City with addresses for each stop." />
+  <meta name="description" content="Accordion itinerary for Kelly's Birthday Trip to Boise & Idaho City with addresses for each stop and an embedded Photos tab." />
   <style>
     :root {
       --bg: #0f172a;          /* slate-900 */
@@ -61,6 +61,12 @@
     .list li { margin: 6px 0; }
     .addr { display: block; color: var(--muted); font-size: .92rem; }
     footer { color: var(--muted); font-size: .9rem; margin-top: 18px; text-align: center; }
+
+    /* Drive embed */
+    .drive-embed-wrap { position: relative; width: 100%; height: 60vh; min-height: 420px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+    .drive-embed { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: rgba(0,0,0,.2); }
+    .hint { color: var(--muted); font-size: .9rem; margin-top: 8px; }
+    @media (max-width: 640px) { .drive-embed-wrap { height: 50vh; min-height: 340px; } }
 
     /* Print helpers */
     @media print {
@@ -183,6 +189,23 @@
         </div>
       </div>
 
+      <!-- PHOTOS (Embedded Google Drive Folder) -->
+      <div class="acc-item">
+        <h2 class="acc-header" id="hdr-photos">
+          <button class="acc-button" type="button" aria-expanded="false" aria-controls="panel-photos" id="btn-photos">
+            <span>Photos</span>
+            <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </h2>
+        <div class="acc-panel" id="panel-photos" role="region" aria-labelledby="btn-photos" hidden>
+          <div class="drive-embed-wrap">
+            <!-- Drive embedded folder view (Anyone-with-link must be ON for this folder) -->
+            <iframe class="drive-embed" src="https://drive.google.com/embeddedfolderview?id=1KJQ1xp-RGfeWBWPoV59ujYtIVZrIV-1n#grid" loading="lazy" title="Trip Photos"></iframe>
+          </div>
+          <p class="hint">If a photo doesn’t load, confirm the folder’s sharing is set to <em>Anyone with the link</em> in Google Drive.</p>
+        </div>
+      </div>
+
     </section>
 
     <footer>Tip: Click a day to expand; only one day stays open at a time.</footer>
@@ -193,7 +216,6 @@
     (function () {
       const accordion = document.getElementById('trip-accordion');
       const buttons = accordion.querySelectorAll('.acc-button');
-      const panels = accordion.querySelectorAll('.acc-panel');
 
       function closeAll(exceptBtn) {
         buttons.forEach((btn) => {
@@ -209,16 +231,15 @@
         if (!btn) return;
         const isOpen = btn.getAttribute('aria-expanded') === 'true';
         if (isOpen) {
-          // collapse if already open
           btn.setAttribute('aria-expanded', 'false');
           document.getElementById(btn.getAttribute('aria-controls')).hidden = true;
         } else {
-          closeAll(btn); // open this and close others
+          closeAll(btn);
         }
       });
 
-      // Optional: open the first day by default
-      // closeAll(buttons[0]);
+      // Optional: open a specific panel by default
+      // closeAll(document.getElementById('btn-photos')); // e.g., open Photos first
     })();
   </script>
 </body>
