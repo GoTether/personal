@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Town &amp; Country Lawn Service — Proposal Summary</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #151923;
+    --ink: #e9edf1;
+    --muted: #a9b0bb;
+    --accent: #86b7fe;
+    --border: #272c36;
+    --good: #8fd17f;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font: 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; }
+  .wrap { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+  header { margin-bottom: 22px; }
+  h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: .3px; }
+  .sub { color: var(--muted); font-size: 14px; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+  .grid { display: grid; gap: 18px; }
+  .tag { display: inline-block; padding: 4px 8px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); font-size: 12px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 12px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { text-align: left; color: var(--muted); font-weight: 600; font-size: 13px; }
+  td.price { white-space: nowrap; text-align: right; font-weight: 600; }
+  .scope { color: var(--ink); }
+  .muted { color: var(--muted); }
+  .note { color: var(--muted); font-size: 13px; }
+  .totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .total { background: #121622; border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+  .total h3 { margin: 0 0 6px; font-size: 16px; }
+  .total .amount { font-size: 22px; font-weight: 700; }
+  .pill { display: inline-block; font-size: 12px; color: var(--muted); padding: 2px 8px; border: 1px solid var(--border); border-radius: 999px; margin-left: 8px; }
+  ul { margin: 10px 0 0 18px; }
+  li { margin: 6px 0; }
+  .footnote { font-size: 12px; color: var(--muted); }
+  .warn { color: var(--accent); }
+  .good { color: var(--good); }
+  .section-title { margin: 22px 0 10px; font-size: 18px; }
+  .small { font-size: 13px; }
+  @media print {
+    body { background: #fff; color: #000; }
+    .panel, .total { box-shadow: none; }
+    .wrap { margin: 0; }
+    .tag, .pill { border-color: #ccc; color: #333; }
+    .warn { color: #000; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Town &amp; Country Lawn Service — Proposal Summary</h1>
+      <div class="sub">Project: <strong>New Project</strong> &nbsp;•&nbsp; <span class="tag">All work areas on hold pending approval</span></div>
+    </header>
+
+    <section class="panel grid">
+      <div>
+        <h2 class="section-title">Scope &amp; Pricing</h2>
+        <table>
+          <thead>
+            <tr>
+              <th style="width:36px;">#</th>
+              <th>Work Area</th>
+              <th>Scope Highlights</th>
+              <th style="width:140px;">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><strong>Bury Downspouts</strong></td>
+              <td class="scope">Excavate SW garage downspout; 4&quot; PVC, glued fittings; ~25' run pitched to daylight; backfill with existing soils; clean up.</td>
+              <td class="price">$375</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong>Retaining Wall Install</strong></td>
+              <td class="scope">40' wall SW side near utilities; 8&quot; compacted TB base; 3' off house; tapered ends; stone: <em>Quarry Ledge – Grand Traverse</em>; delivery &amp; clean up.</td>
+              <td class="price">$9,120</td>
+            </tr>
+            <tr>
+              <td>3A</td>
+              <td><strong>Under-Deck Stone — Basic</strong> <span class="pill">choose 3A or 3B</span></td>
+              <td class="scope">Grade for pitch; weed fabric; <strong>1&quot; clear stone</strong>, 2&quot; thick under full deck + 2' perimeter bed; <strong>7 tons</strong> stone; <strong>3 tons</strong> 3/4&quot; traffic bond under north deck for storage; delivery &amp; clean up.</td>
+              <td class="price">$3,475</td>
+            </tr>
+            <tr>
+              <td>3B</td>
+              <td><strong>Under-Deck Stone — Decorative</strong> <span class="pill">choose 3A or 3B</span></td>
+              <td class="scope">Grade for pitch; weed fabric; <strong>1.5&quot; Jet Black</strong> stone, 2–3&quot; thick under full deck + 2' perimeter bed; <strong>8 tons</strong> stone; <strong>3 tons</strong> 3/4&quot; traffic bond under north deck for storage; delivery &amp; clean up.</td>
+              <td class="price">$4,300</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><strong>Fire Pit Granite Install</strong></td>
+              <td class="scope">Remove weeds/gravel; new weed fabric; install Jet Black Granite to 3&quot; below paver edger; compact; delivery &amp; clean up.</td>
+              <td class="price">$2,380</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><strong>Lawn Installation (Main Yard)</strong></td>
+              <td class="scope">Final grade entire lawn to lakeside silt fence/property markers; Harley rake; debris removal; <strong>80 yd</strong> topsoil delivered &amp; spread; 50/50 seed @ 4–5 lbs/1,000 sf; starter fertilizer; hydro mulch + tackifier; hydroseed; remove silt fence/debris. <span class="muted">Downspout extensions not included.</span></td>
+              <td class="price">$12,130</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><strong>Lake Side Lawn Installation</strong></td>
+              <td class="scope">Final grade lakeside area (~<strong>5,300 sf</strong>); Harley rake; debris removal; <strong>20 yd</strong> topsoil delivered &amp; spread; 50/50 seed @ 4–5 lbs/1,000 sf; starter fertilizer; hydro mulch + tackifier; hydroseed; remove silt fence/debris. <span class="muted">Downspout extensions not included.</span></td>
+              <td class="price">$3,500</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td><strong>Lake Side Crushed Granite Install</strong></td>
+              <td class="scope">Spray within 4' of shoreline; remove sod; bed edge; install <strong>5&quot; black edging</strong>; weed fabric; place <strong>6 tons Jet Black 1.5&quot;</strong> stone at 2–3&quot; depth to shoreline boulders; compact; delivery &amp; clean up.</td>
+              <td class="price">$3,040</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td><strong>Shed Building Pad</strong></td>
+              <td class="scope">Move shed; excavate and build <strong>12'×18'</strong>, 8&quot; compacted gravel pad; reinstall shed; chicken wire sides for animal control; delivery &amp; clean up.</td>
+              <td class="price">$1,880</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td><strong>Shed Trenching for Power</strong></td>
+              <td class="scope">Trench from house (near deck) to west shed corner; <strong>18&quot;</strong> depth; <strong>3/4&quot; PVC</strong> with T into house &amp; shed; caulk penetrations; delivery &amp; clean up.</td>
+              <td class="price">$800</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td><strong>Under-Deck — Deck Board Install</strong></td>
+              <td class="scope">Install matching-color deck boards to enclose storage area; treated blocking; color-matched screws; skirt board on corner post; adjust/secure downspout; delivery &amp; clean up.</td>
+              <td class="price">$1,995</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td><strong>Deck Landing &amp; Walkway</strong></td>
+              <td class="scope">Excavate 8&quot;; build <strong>4'×4'</strong> pad + <strong>11'</strong> walkway to fire pit; <strong>2&quot; Eden Flagstone</strong> (no outer edging), ~4' wide; saw/snapped edges; grey polysand joints; delivery &amp; clean up.</td>
+              <td class="price">$3,225</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td><strong>Garage Side Door Landing</strong></td>
+              <td class="scope">Excavate 10&quot;; <strong>4'×4'</strong> landing with <strong>2&quot; Eden Flagstone</strong>; detail cuts/snaps; grey polysand joints; delivery &amp; clean up.</td>
+              <td class="price">$1,500</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td><strong>Stone &amp; Edging Install (Beds)</strong></td>
+              <td class="scope">Bed edge <strong>172'</strong> including along garage; <strong>5&quot; black plastic edging</strong>; weed fabric; install <strong>1.5&quot; Jet Black</strong> stone at 2–3&quot; depth; delivery &amp; clean up.</td>
+              <td class="price">$3,485</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <h2 class="section-title">Pricing Summary</h2>
+        <div class="totals">
+          <div class="total">
+            <h3>Choose Basic Under-Deck <span class="pill">3A</span></h3>
+            <div class="amount good">$46,905</div>
+            <div class="note">Assumes only one under-deck option is selected.</div>
+          </div>
+          <div class="total">
+            <h3>Choose Decorative Under-Deck <span class="pill">3B</span></h3>
+            <div class="amount good">$47,730</div>
+            <div class="note">Assumes only one under-deck option is selected.</div>
+          </div>
+        </div>
+
+        <h3 class="section-title small">Potential Adders</h3>
+        <ul>
+          <li>Extra soil (main yard): <strong>$600 / truckload</strong> added as needed.</li>
+          <li>Extra soil (lakeside): <strong>$500 / truckload</strong> added as needed.</li>
+        </ul>
+
+        <h2 class="section-title">Terms &amp; Notices</h2>
+        <ul>
+          <li>Estimate valid for <strong>10 days</strong> from date sent; after 10 days, prices subject to resubmittal.</li>
+          <li>Work performed to standard practices. Changes/additions not listed are extra.</li>
+          <li>Schedule subject to strikes, accidents, weather, or other delays beyond contractor control.</li>
+          <li>Owner to carry fire, tornado, and other insurance. Contractor carries Workers’ Comp.</li>
+          <li>Heavy equipment may damage curbs, driveway, or sidewalks; contractor not responsible.</li>
+          <li>Contractor may add a <strong>fuel surcharge</strong> if fuel prices rise between contract signing and project start.</li>
+        </ul>
+        <p class="footnote warn">Note: Lakeside crushed granite (Item 7) can coexist with lakeside lawn (Item 6) as a shoreline band.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
